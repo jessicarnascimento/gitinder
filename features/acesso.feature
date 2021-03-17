@@ -13,15 +13,18 @@ Funcionalidade: Acesso
         Quando entro no gitnder
         Entao devo ver a area logada
 
-    @inexistente
-    Cenario: Conta nao existe no github
-        Dado que possuo a conta "jessicarnascimento423"
+    @tentar_logar
+    Esquema do Cenario: Tentar logar
+
+        Dado que possuo a conta "<github>"
         Quando entro no gitnder
         Entao devo ver a mensagem de alerta:"Conta Github não existe :("
+
+        Exemplos:
+        | github                  |
+        | jessicarnascimento123434|
+        |                         |
     
-    @nao_informada
-    Cenario: Conta nao informada
-        Dado que possuo a conta ""
-        Quando entro no gitnder
-        Entao devo ver a mensagem de alerta:"Conta Github não existe :("
+    
+    
 
