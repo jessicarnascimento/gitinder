@@ -5,21 +5,23 @@ Funcionalidade: Acesso
     Sendo um usuario que possui uma conta no github
     Quero poder iniciar uma nova sessao
 
-    @test_nova
+    @login
     Cenario: Nova sessao
         
-        Dado que "jessicarnascimento" e a minha conta do github
+        Dado que possuo a conta "jessicarnascimento"
         E possuo as skills "ruby, python, c#"
         Quando entro no gitnder
         Entao devo ver a area logada
 
+    @inexistente
     Cenario: Conta nao existe no github
-        Dado que "papitoio" não e uma conta no github
+        Dado que possuo a conta "jessicarnascimento423"
         Quando entro no gitnder
-        Entao devo ver a mensagem de alerta:"Conta Github nao existe"
+        Entao devo ver a mensagem de alerta:"Conta Github não existe :("
     
+    @nao_informada
     Cenario: Conta nao informada
-        Dado que "" não e uma conta no github
+        Dado que possuo a conta ""
         Quando entro no gitnder
-        Entao devo ver a mensagem de alerta:"Conta Github nao existe"
+        Entao devo ver a mensagem de alerta:"Conta Github não existe :("
 
